@@ -6,6 +6,9 @@ const API_URL = "https://api.themoviedb.org/3/movie";
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: false,
+  images: {
+    domains: ["https://image.tmdb.org"],
+  },
   async rewrites() {
     return [
       {

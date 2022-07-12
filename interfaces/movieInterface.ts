@@ -13,3 +13,7 @@ export interface IMovieListProps {
 export interface IHomeProps {
   results: IPopularMovies[];
 }
+
+export interface IMovieProps {
+  movieInfo: IPopularMovies;
+}
