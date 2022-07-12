@@ -5,7 +5,7 @@ const HeadSet = ({ title }: IHeadSetProps) => {
   return (
     <>
       <Head>
-        <title>{title} | NextMovie</title>
+        <title>`${title} | NextMovie`</title>
       </Head>
     </>
   );
