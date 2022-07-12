@@ -2,10 +2,11 @@ import Head from "next/head";
 import { IHeadSetProps } from "../interfaces/HeadSetInterface";
 
 const HeadSet = ({ title }: IHeadSetProps) => {
+  const headTitle = `${title} | NextMovie`;
   return (
     <>
       <Head>
-        <title>`${title} | NextMovie`</title>
+        <title>{headTitle}</title>
       </Head>
     </>
   );
