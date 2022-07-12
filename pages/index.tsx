@@ -1,7 +1,7 @@
 import HeadSet from "../components/head";
 import Header from "../components/header";
 import MovieList from "../components/movieList";
-import { IHomeProps, IPopularMovies } from "../interfaces/movieInterface";
+import { IHomeProps } from "../interfaces/movieInterface";
 import { getPopularMovies } from "./api/movieApi";
 
 const Home = ({ results: movies }: IHomeProps) => {
