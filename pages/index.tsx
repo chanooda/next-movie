@@ -1,26 +1,21 @@
-import { useEffect, useState } from "react";
 import HeadSet from "../components/head";
 import Header from "../components/header";
 import MovieList from "../components/movieList";
-import { IPopularMovies } from "../interfaces/movieInterface";
+import { IHomeProps, IPopularMovies } from "../interfaces/movieInterface";
 import { getPopularMovies } from "./api/movieApi";
 
-const Home = () => {
-  const [data, setData] = useState<IPopularMovies[]>();
-  useEffect(() => {
-    (async () => {
-      const movieData = await getPopularMovies();
-      setData(movieData);
-    })();
-  }, []);
-
+const Home = ({ results: movies }: IHomeProps) => {
   return (
     <>
       <HeadSet title="Home" />
       <Header title="Next Movie" />
-      {data ? <MovieList movies={data} /> : <h4>loading...</h4>}
+      {movies ? <MovieList movies={movies} /> : <h4>loading...</h4>}
     </>
   );
 };
+
+export async function getServerSideProps() {
+  return { props: { results: await getPopularMovies() } };
+}
 
 export default Home;

@@ -9,3 +9,7 @@ export interface IPopularMovies {
 export interface IMovieListProps {
   movies: IPopularMovies[];
 }
+
+export interface IHomeProps {
+  results: IPopularMovies[];
+}
