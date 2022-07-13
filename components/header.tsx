@@ -1,10 +1,13 @@
 import { IHeaderProps } from "../interfaces/HeaderInterface";
+import { HeaderContainer } from "./styled-components/headerStyled";
 
 const Header = ({ title }: IHeaderProps) => {
   return (
-    <header>
-      <h1>{title}</h1>
-    </header>
+    <>
+      <HeaderContainer>
+        <h1>{title}</h1>
+      </HeaderContainer>
+    </>
   );
 };
 
