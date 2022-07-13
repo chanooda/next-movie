@@ -3,7 +3,6 @@ import Movie from "./movie";
 import { MovieListContainer } from "./styled-components/movieListStyled";
 
 const MovieList = ({ movies }: IMovieListProps) => {
-  console.log(movies);
   return (
     <>
       <MovieListContainer>
