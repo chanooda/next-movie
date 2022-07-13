@@ -5,7 +5,7 @@ import { MovieContainer, MovieTitle } from "./styled-components/movieStyled";
 export default function Movie({ movieInfo }: IMovieProps) {
   return (
     <>
-      <Link href={`/detail/${movieInfo.id}`}>
+      <Link href={`/detail/${movieInfo.title}/${movieInfo.id}`}>
         <a>
           <MovieContainer>
             <div className="img_container">

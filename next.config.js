@@ -15,6 +15,10 @@ const nextConfig = {
         source: "/api/movies",
         destination: `${API_URL}/popular?api_key=${API_KEY}&page=1`,
       },
+      {
+        source: "/api/Detail/:id",
+        destination: `${API_URL}/:id?api_key=${API_KEY}`,
+      },
     ];
   },
 };
