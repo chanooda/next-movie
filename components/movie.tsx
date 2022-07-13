@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IMovieProps } from "../interfaces/movieInterface";
+import { getImagePath } from "../utils/movieUtils";
 import { MovieContainer, MovieTitle } from "./styled-components/movieStyled";
 
 export default function Movie({ movieInfo }: IMovieProps) {
@@ -9,8 +11,10 @@ export default function Movie({ movieInfo }: IMovieProps) {
         <a>
           <MovieContainer>
             <div className="img_container">
-              <img
-                src={`https://image.tmdb.org/t/p/w200/${movieInfo.poster_path}`}
+              <Image
+                width={200}
+                height={300}
+                src={getImagePath(movieInfo.poster_path, "w200")}
                 alt={movieInfo.title}
               />
             </div>

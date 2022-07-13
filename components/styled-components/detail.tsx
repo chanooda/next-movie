@@ -25,9 +25,6 @@ export const BgImageContainer = tw.div`
    w-[300px]
 `;
 
-export const BgImage = tw.img`
-`;
-
 export const InfoContainer = tw.div`
     max-w-[800px]
     flex

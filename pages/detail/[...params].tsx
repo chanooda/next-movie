@@ -1,9 +1,9 @@
 import { GetServerSideProps } from "next";
+import Image from "next/image";
 import HeadSet from "../../components/head";
 import Header from "../../components/header";
 import {
   Badge,
-  BgImage,
   BgImageContainer,
   DetailBoard,
   DetailContainer,
@@ -21,7 +21,7 @@ export default function Detail({ movieDetailData }: IDetailProps) {
       <DetailContainer>
         <DetailBoard>
           <BgImageContainer>
-            <BgImage src={getImagePath(movieDetailData.poster_path, "w300")} alt="" />
+            <Image src={getImagePath(movieDetailData.poster_path, "w300")} alt="" />
           </BgImageContainer>
           <InfoContainer>
             <h3 className="text-2xl">{movieDetailData.title}</h3>

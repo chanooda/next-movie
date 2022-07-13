@@ -4,10 +4,10 @@ const API_KEY = "f6fbe9a13820afc7b29d03b000ebe095";
 const API_URL = "https://api.themoviedb.org/3/movie";
 
 const nextConfig = {
-  swcMinify: true,
+  swcMinify: false,
   reactStrictMode: false,
   images: {
-    domains: ["https://image.tmdb.org"],
+    domains: ["image.tmdb.org"],
   },
   async rewrites() {
     return [
