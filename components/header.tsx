@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IHeaderProps } from "../interfaces/headerInterface";
+import { IHeaderProps } from "../interfaces/HeaderInterface";
 import { Back, HeaderContainer } from "./styled-components/headerStyled";
 
 const Header = ({ title }: IHeaderProps) => {
