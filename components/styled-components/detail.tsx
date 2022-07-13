@@ -1,42 +1,41 @@
 import tw from "tailwind-styled-components";
 
 export const DetailContainer = tw.div`
+    px-4
     w-full
-    h-[100vh]
+    h-[calc(100vh_-_64px)]
     flex
     justify-center
-    items-center
+    items-start
+    lg:items-center
 `;
 export const DetailBoard = tw.div`
-    p-10
-    w-[1200px]
-    h-[514px]
-    flex
-    gap-6
-    shadow-2xl
-    bg-slate-300
+   max-w-[1280px]
+   flex
+   flex-col
+   items-center
+   p-5
+   gap-4
+   bg-slate-300
+   shadow-2xl
+   lg:flex-row
+   lg:items-start
 `;
 export const BgImageContainer = tw.div`
-     w-[300px]
+   w-[300px]
 `;
 
 export const BgImage = tw.img`
-    w-full
 `;
 
 export const InfoContainer = tw.div`
-    w-[836px]
-    h-full
+    max-w-[800px]
     flex
     flex-col
-    items-start
 `;
 export const Badge = tw.span`
-    py-2
-    px-4
-    text-white
-    text-center
-  bg-slate-500
-    rounded-md
-
+   p-2
+   bg-slate-400
+   text-white
+   rounded-lg
 `;

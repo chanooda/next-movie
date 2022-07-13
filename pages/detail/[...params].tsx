@@ -13,8 +13,7 @@ import { IDetailProps } from "../../interfaces/detailInterface";
 import { getImagePath } from "../../utils/movieUtils";
 import { getMovieDetail } from "../api/movieApi";
 
-export default function Detail({ params, movieDetailData }: IDetailProps) {
-  console.log(movieDetailData);
+export default function Detail({ movieDetailData }: IDetailProps) {
   return (
     <>
       <HeadSet title={movieDetailData.title} />
@@ -40,10 +39,10 @@ export default function Detail({ params, movieDetailData }: IDetailProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params: { params } }) => {
-  const [title, id] = params;
+export const getServerSideProps: GetServerSideProps = async ({ query: { params } }) => {
+  const id = params ? params[1] : "";
   const movieDetailData = await getMovieDetail(id);
   return {
-    props: { params, movieDetailData },
+    props: { movieDetailData },
   };
 };

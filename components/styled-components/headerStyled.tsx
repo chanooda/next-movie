@@ -5,7 +5,6 @@ export const HeaderContainer = tw.header`
     h-16 
     pl-8
     top-0
-    fixed
     text-2xl
     flex 
     items-center 
