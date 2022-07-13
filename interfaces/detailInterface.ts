@@ -20,11 +20,3 @@ export interface IMovieDetailData {
   tagline: string;
   title: string;
 }
-
-export interface IDetailSsrQuery {
-  query: IDetailSsrParams;
-}
-
-export interface IDetailSsrParams {
-  params: string[];
-}
