@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import HeadSet from "../../components/head";
 import Header from "../../components/header";
 import {
   Badge,
@@ -16,6 +17,8 @@ export default function Detail({ params, movieDetailData }: IDetailProps) {
   console.log(movieDetailData);
   return (
     <>
+      <HeadSet title={movieDetailData.title} />
+      <Header />
       <DetailContainer>
         <DetailBoard>
           <BgImageContainer>
