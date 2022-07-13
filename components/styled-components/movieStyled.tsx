@@ -2,6 +2,7 @@ import tw from "tailwind-styled-components";
 
 export const MovieContainer = tw.li`
     w-full
+    h-full
     p-6
     mx-auto
     shadow-2xl
