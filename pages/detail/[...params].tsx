@@ -21,13 +21,18 @@ export default function Detail({ movieDetailData }: IDetailProps) {
       <DetailContainer>
         <DetailBoard>
           <BgImageContainer>
-            <Image src={getImagePath(movieDetailData.poster_path, "w300")} alt="" />
+            <Image
+              src={getImagePath(movieDetailData.poster_path, "w300")}
+              alt={movieDetailData.title}
+              width={300}
+              height={450}
+            />
           </BgImageContainer>
           <InfoContainer>
             <h3 className="text-2xl">{movieDetailData.title}</h3>
             <p className="mt-4 text-base">{`"${movieDetailData.tagline}"`}</p>
             <p className="mt-4 text-lg">{movieDetailData.overview}</p>
-            <p className="mt-6 flex gap-2">
+            <p className="flex gap-2 mt-6">
               {movieDetailData.genres.map((genre, i) => (
                 <Badge key={genre.id}>{genre.name}</Badge>
               ))}
