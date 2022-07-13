@@ -1,23 +1,16 @@
 import { IMovieListProps } from "../interfaces/movieInterface";
 import Movie from "./movie";
+import { MovieListContainer } from "./styled-components/movieListStyled";
 
 const MovieList = ({ movies }: IMovieListProps) => {
   console.log(movies);
   return (
     <>
-      <ul>
+      <MovieListContainer>
         {movies?.map((movie) => (
           <Movie key={movie.id} movieInfo={movie} />
         ))}
-      </ul>
-      <style jsx>{`
-        ul {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 30px;
-        }
-      `}</style>
+      </MovieListContainer>
     </>
   );
 };
